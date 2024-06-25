@@ -1,0 +1,333 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ===== Reset some default styles ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== VARIABLES ===== */
+:root{
+    --bg-color: #fff;
+    --primary-color: #000000;
+    --second-color: #196FE0;
+    --hover-bg-color: #efefef;
+    --shadow-1: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    --shadow-2: 0px 2px 10px rgba(26, 112, 224, 0.4);
+}
+/* ===== BODY ===== */
+body{
+    background: url("images/backgroun.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ===== Reusable CSS ===== */
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+ul{
+    list-style-type: none;
+}
+
+/* ===== Menu Toggle ===== */
+.menu-toggle{
+    display: none;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* ===== Navigation Bar ===== */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3vw;
+    height: 90px;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    background: rgba(39, 39, 39, 0.4);
+    background-color:rgba(rgba(228, 226, 228, 0.8));
+   
+}
+.logo h1{
+    font-weight: 600;
+}
+.nav-main-menu{
+    display: flex;
+}
+.nav-link{
+    padding: 26px 10px;
+    margin-inline: 10px;
+    transition: .3s;
+}
+.nav-link:hover{
+    color: var(--second-color);
+}
+.nav span{
+    margin-right: 5px;
+}
+.fa-chevron-down, .fa-chevron-right{
+    font-size: 12px;
+    transition: .3s;
+}
+
+.dropdown:hover .fa-chevron-down, .sub-dropdown:hover .fa-chevron-right{
+    transform: rotate(180deg);
+}
+.dropdown:hover .nav-link{
+    color: var(--second-color);
+}
+
+/* ===== Dropdown ===== */
+.dropdown{
+    position: relative;
+}
+.nav-main-menu .dropdown-content{
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    background: var(--bg-color);
+    min-width: 240px;
+    border-top: 3px solid #ccc;
+    border-radius: 0 0 3px 3px;
+    animation: slideUp .3s;
+}
+.dropdown-content li{
+    padding: 20px;
+}
+.dropdown-content li:hover{
+    background: var(--hover-bg-color);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+/* ===== Sub - Dropdown ===== */
+.nav-main-menu .sub-dropdown-content{
+   display: none;
+   position: absolute;
+   top: 34%;
+   left: 100%;
+   background: var(--bg-color);
+   min-width: 240px;
+   border-top: 3px solid #ccc;
+   border-radius: 3px;
+   animation: slideUp .3s;
+   box-shadow: var(--shadow-1);
+}
+@keyframes slideUp {
+    from{
+        margin-top: 20px;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+.dropdown-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-dropdown:hover .sub-dropdown-content{
+    display: block;
+}
+.btn{
+    font-size: 15px;
+    background-color: rgb(219, 219, 219);;
+    color: var(--bg-color);
+    border:none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    box-shadow: var(--primary-color);
+    cursor: pointer;
+    transition: .2s;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: var(--bg-color);
+    padding: 20px;
+}
+main p{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+/* ===== Responsive styles ===== */
+
+@media only screen and (max-width: 794px){
+    .nav-main-menu{
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+}
+
+
+/* Countact Us page */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    /* background: rgb(81, 224, 224); */
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .container2{
+    width: 805;
+    margin: 50px auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .contact-box{
+    background:#a53e3e ;
+    display: flex;
+    background: transparent;
+  }
+  .contact-left{
+    color: #000000;
+    flex-basis: 60%;
+    padding: 40px 60px;
+    background: transparent;
+    flex-wrap: wrap;
+  }
+  .contact-right{
+    flex-basis: 60%;
+    padding: 40px;
+    /* background: #bfbec9; */
+    color: #000000;
+    background: transparent;
+    flex-wrap: wrap;
+}
+h1{
+   margin-bottom: 10px;
+   margin-left: 50px;
+   margin-top: 16%;
+   font-size: 40px;
+   color: #000000;
+   text-align: center
+   
+}
+.container2 p{
+    margin-bottom: 40px;
+    margin-left: 50px;
+    margin-top:2% ;
+    color: #383838;
+}
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+     
+}
+.input-row .input-group{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border: 2px solid black;
+    border-bottom: 1px solid #f8f3f3;
+    outline: none;
+    padding-bottom: 5px;
+}
+textarea{
+    width: 100%;
+    border: 2px solid #010101;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: dotted;
+    background: #ccc;
+}
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: #000000;
+    background: transparent;
+}
+button{
+    background-size: #f6e9e9;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #100f0f;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(18, 2, 84, 0.3); 
+    font-size: larger; 
+}
+.contact-left h3{
+  color: hsl(0, 0%, 4%);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.contact-right h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+tr td:first-child{
+    padding-right: 20px;
+}
+tr td{
+    padding-top: 50px;
+}
+.heading3{
+    padding-top: 40px;
+}
+.mail{
+    margin-left: 35px;
+}
+.phone-no{
+   margin-left: 30px;
+}
+.add{
+    margin-left: 20px;
+}
+@media only screen and (max-width: 786px){
+    .contact-box{
+        flex-wrap: wrap;
+        
+    }
+    .contact-left{
+        width: 100%;
+        padding-right: -50%;
+    }
+    .contact-right{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    
+}
